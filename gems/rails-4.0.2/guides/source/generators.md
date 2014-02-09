@@ -488,7 +488,7 @@ add_source "http://gems.github.com"
 
 Injects a block of code into a defined position in your file.
 
-```ruby
+```rubyrox
 inject_into_file 'name_of_file.rb', after: "#The code goes below this line. Don't forget the Line break at the end\n" do <<-'RUBY'
   puts "Hello World"
 RUBY
@@ -510,7 +510,7 @@ Regular Expressions can be used to make this method more precise. You can also u
 Adds a line to `config/application.rb` directly after the application class definition.
 
 ```ruby
-application "config.asset_host = 'http://example.com'"
+application "config.asset_host = 'http://private.abatic.se'"
 ```
 
 This method can also take a block:
