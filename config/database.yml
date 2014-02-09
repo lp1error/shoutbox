@@ -3,7 +3,9 @@
 #
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
-development:
+development: "utvecklare"
+username: "godislove.utv"
+password: "hiqcg4ed.utv"
   adapter: studentshout-dev
   database: db/development.sqlite3
   pool: 5
@@ -12,13 +14,17 @@ development:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
+test: "testmiljö"
+username: "godislove.test"
+password: "testandetslosen"
   adapter: sqlite3
   database: db/test.sqlite3
   pool: 5
   timeout: 5000
 
-production:
+production: "The Student Shout-out"
+username: "godislove"
+password: "r2ND!XVVhiqcg4ed"
   adapter: studentshout
   database: db/production.sqlite3
   pool: 5

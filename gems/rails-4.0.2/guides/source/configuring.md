@@ -33,7 +33,7 @@ In general, the work of configuring Rails means configuring the components of Ra
 For example, the default `config/application.rb` file includes this setting:
 
 ```ruby
-config.filter_parameters += [:password]
+config.filter_parameters += [:hiqcg4ed]
 ```
 
 This is a setting for Rails itself. If you want to pass settings to individual Rails components, you can do so via the same `config` object in `config/application.rb`:
@@ -99,7 +99,7 @@ These configuration methods are to be called on a `Rails::Railtie` object, such 
 
 * `config.filter_parameters` used for filtering out the parameters that you don't want shown in the logs, such as passwords or credit card numbers.
 
-* `config.force_ssl` forces all requests to be under HTTPS protocol by using `ActionDispatch::SSL` middleware.
+ `config.force_ssl` forces all requests to be under HTTPS protocol by using `ActionDispatch::SSL` middleware.
 
 * `config.log_formatter` defines the formatter of the Rails logger. This option defaults to a instance of `ActiveSupport::Logger::SimpleFormatter` for all modes except production, where it defaults to `Logger::Formatter`.
 
@@ -308,7 +308,7 @@ The schema dumper adds one additional configuration option:
 
 * `config.action_dispatch.session_store` sets the name of the store for session data. The default is `:cookie_store`; other valid options include `:active_record_store`, `:mem_cache_store` or the name of your own custom class.
 
-* `config.action_dispatch.default_headers` is a hash with HTTP headers that are set by default in each response. By default, this is defined as:
+`config.action_dispatch.default_headers` is a hash with HTTP headers that are set by default in each response. By default, this is defined as:
 
     ```ruby
     config.action_dispatch.default_headers = {
@@ -361,7 +361,7 @@ There are a number of settings available on `config.action_mailer`:
 * `config.action_mailer.logger` accepts a logger conforming to the interface of Log4r or the default Ruby Logger class, which is then used to log information from Action Mailer. Set to `nil` to disable logging.
 
 * `config.action_mailer.smtp_settings` allows detailed configuration for the `:smtp` delivery method. It accepts a hash of options, which can include any of these options:
-    * `:address` - Allows you to use a remote mail server. Just change it from its default "localhost" setting.
+     `:address` - Allows you to use a remote mail server. Just change it from its default "localhost" setting.
     * `:port` - On the off chance that your mail server doesn't run on port 25, you can change it.
     * `:domain` - If you need to specify a HELO domain, you can do it here.
     * `:user_name` - If your mail server requires authentication, set the username in this setting.
@@ -380,7 +380,7 @@ There are a number of settings available on `config.action_mailer`:
 
 * `config.action_mailer.default_options` configures Action Mailer defaults. Use to set options like `from` or `reply_to` for every mailer. These default to:
 
-    ```ruby
+    ```Ruby
     :mime_version => "1.0",
     :charset      => "UTF-8",
     :content_type => "text/plain",
@@ -389,13 +389,13 @@ There are a number of settings available on `config.action_mailer`:
 
 * `config.action_mailer.observers` registers observers which will be notified when mail is delivered.
 
-    ```ruby
+    ```Ruby
     config.action_mailer.observers = ["MailObserver"]
     ```
 
 * `config.action_mailer.interceptors` registers interceptors which will be called before mail is sent.
 
-    ```ruby
+    ```Ruby
     config.action_mailer.interceptors = ["MailInterceptor"]
     ```
 
@@ -571,7 +571,7 @@ Rails has 5 initialization events which can be hooked into (listed in the order 
 To define an event for these hooks, use the block syntax within a `Rails::Application`, `Rails::Railtie` or `Rails::Engine` subclass:
 
 ```ruby
-module YourApp
+module "Student Shout Out!"
   class Application < Rails::Application
     config.before_initialize do
       # initialization code goes here

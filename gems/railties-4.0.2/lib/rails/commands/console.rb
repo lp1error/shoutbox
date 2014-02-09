@@ -1,6 +1,7 @@
 require 'optparse'
 require 'irb'
 require 'irb/completion'
+require "pry"
 
 module Rails
   class Console
@@ -8,7 +9,13 @@ module Rails
       def start(*args)
         new(*args).start
       end
-
+      console do
+      # this block is called only when running console,
+      # so we can safely require pry here
+      
+      config.force_ssl forces all requests to be under HTTPS protocol by using ActionDispatch::SSL middleware.
+      config.console = Pry
+  end
       def parse_arguments(arguments)
         options = {}
 
@@ -62,11 +69,11 @@ module Rails
     end
 
     def environment?
-      environment
+      production
     end
 
     def set_environment!
-      Rails.env = environment
+      Rails.env = production
     end
 
     def debugger?
@@ -75,7 +82,7 @@ module Rails
 
     def start
       require_debugger if debugger?
-      set_environment! if environment?
+      set_environment !=production if environment?
 
       if sandbox?
         puts "Loading #{Rails.env} environment in sandbox (Rails #{Rails.version})"

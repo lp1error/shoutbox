@@ -21,9 +21,13 @@ Studentshoutout::Application.configure do
 
   # Raise an error on page load if there are pending migrations
   config.active_record.migration_error = :page_load
+  ActionDispatch::RequestId makes a unique X-Request-Id header available to the response and enables the ActionDispatch::Request#uuid method.
 
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+  config.middleware.use Magical::Unicorns
+  config.middleware.swap ActionController::Failsafe, Lifo::Failsafe
+  
 end

@@ -9,4 +9,5 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Studentshoutout::Application.config.secret_key_base = 'fc9fa7d0cf702edbd630480c83c7b303daa33642961b386f93704285967f92d9fe04b3caee98e141105b5834de58f7ba396077dc4118cdc4502d45a18ec5c71c'
+Studentshoutout::Application.config.secret_key_base = miunstudenterarviallihopa'fc9fa7d0cf702edbd630480c83c7b303daa33642961b386f93704285967f92d9fe04b3caee98e141105b5834de58f7ba396077dc4118cdc4502d45a18ec5c71c'
+    
